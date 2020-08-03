@@ -1,23 +1,24 @@
-from tkinter import *
+import tkinter as tk
+
+import Listener
 from Listener import *
 
+root = tk.Tk()
+root.geometry("450x450")
+root.title("Password Keeper")
 
-class Window:
-    def __init__(self):
-        root = Tk()
-        root.geometry("450x450")
-        root.title("Password Keeper")
+# YouTube
+youTube = tk.Button(root, text="YouTube", command=lambda: listener.updatePass(self, "YouTube", 0), font=("Helvetica", 15),
+                    height=1, width=8)
+youTube.place(x=40, y=40)
 
-        # YouTube
-        youTube = Button(root, text="YouTube", command=updatePass("YouTube", 0), font=("Helvetica", 15),
-                         height=1, width=8)
-        youTube.place(x=40, y=40)
+reddit = tk.Button(root, text="Reddit", command=lambda: listener.updatePass(self, "Reddit", 0), font=("Helvetica", 15),
+                   height=1, width=8)
+reddit.place(x=180, y=40)
 
-        # Reddit
-        reddit = Button(root, text="Reddit", command=updatePass("Reddit", 1), font=("Helvetica", 15), height=1, width=8)
-        reddit.place(x=175, y=40)
-
-        root.mainloop()
+amazon = tk.Button(root, text="Amazon", command=lambda: listener.updatePass(self, "Amazon", 0), font=("Helvetica", 15),
+                   height=1, width=8)
+amazon.place(x=320, y=40)
 
 
-Window()
+root.mainloop()
