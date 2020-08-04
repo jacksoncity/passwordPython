@@ -21,7 +21,9 @@ class listener:
             "Twitter": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/twitterlogo.ico',
             "Spotify": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/spotifylogo.ico',
             "Google": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/googlelogo.ico',
-            "GitHub": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/githublogo.ico'
+            "GitHub": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/githublogo.ico',
+            "Twitch": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/twitchlogo.ico',
+            "Netflix": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/netflixlogo.ico'
         }
 
         self.newRoot.iconbitmap(serviceList[name])

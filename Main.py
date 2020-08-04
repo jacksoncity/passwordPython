@@ -36,8 +36,16 @@ google = tk.Button(root, text="Google", command=lambda: listener.updatePass(self
                    height=1, width=8)
 google.place(x=320, y=110)
 
-gitHub = tk.Button(root, text="GitHub", command=lambda: listener.updatePass(self, "GitHub", 5), font=("Helvetica", 15),
+gitHub = tk.Button(root, text="GitHub", command=lambda: listener.updatePass(self, "GitHub", 6), font=("Helvetica", 15),
                    height=1, width=8)
 gitHub.place(x=40, y=180)
+
+twitch = tk.Button(root, text="Twitch", command=lambda: listener.updatePass(self, "Twitch", 7), font=("Helvetica", 15),
+                   height=1, width=8)
+twitch.place(x=180, y=180)
+
+netflix = tk.Button(root, text="Netflix", command=lambda: listener.updatePass(self, "Netflix", 8), font=("Helvetica", 15),
+                   height=1, width=8)
+netflix.place(x=320, y=180)
 
 root.mainloop()
