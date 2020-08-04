@@ -1,7 +1,8 @@
 import tkinter as tk
-
 import Listener
 from Listener import *
+from OptionsMenu import *
+
 
 root = tk.Tk()
 root.resizable(False, False)
@@ -47,5 +48,10 @@ twitch.place(x=180, y=180)
 netflix = tk.Button(root, text="Netflix", command=lambda: listener.updatePass(self, "Netflix", 8), font=("Helvetica", 15),
                    height=1, width=8)
 netflix.place(x=320, y=180)
+
+# options button
+options = tk.Button(root, text="Options", command=lambda: optionWindow.menu(self), font=("Helvetica", 8),
+                   height=1, width=6)
+options.place(x=5, y=5)
 
 root.mainloop()
