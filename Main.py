@@ -36,5 +36,8 @@ google = tk.Button(root, text="Google", command=lambda: listener.updatePass(self
                    height=1, width=8)
 google.place(x=320, y=110)
 
+gitHub = tk.Button(root, text="GitHub", command=lambda: listener.updatePass(self, "GitHub", 5), font=("Helvetica", 15),
+                   height=1, width=8)
+gitHub.place(x=40, y=180)
 
 root.mainloop()

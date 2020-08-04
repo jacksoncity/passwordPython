@@ -3,9 +3,6 @@ import self
 import fileinput
 
 
-# FIND A WAY TO POLYMORPH THESE LISTENERS (assign a str value and int value??)
-
-
 class listener:
 
     def updatePass(self, name, num):
@@ -16,28 +13,18 @@ class listener:
         self.newRoot.title(name)
         self.newRoot.configure(bg="grey")
 
-        # check name to correspond to logo in top right
-        if name == "YouTube":
-            self.newRoot.iconbitmap(
-                'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/ytlogo.ico')
-        elif name == "Reddit":
-            self.newRoot.iconbitmap(
-                'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/redditlogo.ico')
-        elif name == "Amazon":
-            self.newRoot.iconbitmap(
-                'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/amazonlogo.ico')
-        elif name == "Twitter":
-            self.newRoot.iconbitmap(
-                'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/twitterlogo.ico')
-        elif name == "Spotify":
-            self.newRoot.iconbitmap(
-                'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/spotifylogo.ico')
-        elif name == "Google":
-            self.newRoot.iconbitmap(
-                'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/googlelogo.ico')
-        else:
-            self.newRoot.iconbitmap(
-                'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/keyicon.ico')
+        # dictionary to hold logo locations to display on top left of window
+        serviceList = {
+            "YouTube": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/ytlogo.ico',
+            "Reddit": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/redditlogo.ico',
+            "Amazon": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/amazonlogo.ico',
+            "Twitter": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/twitterlogo.ico',
+            "Spotify": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/spotifylogo.ico',
+            "Google": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/googlelogo.ico',
+            "GitHub": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/githublogo.ico'
+        }
+
+        self.newRoot.iconbitmap(serviceList[name])
 
         # base widgets to display
         self.passEntry = tk.Entry(self.newRoot, bd=3)
