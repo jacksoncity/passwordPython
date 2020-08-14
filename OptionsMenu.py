@@ -5,7 +5,7 @@ from tkinter import colorchooser
 
 class optionWindow:
     lines = open('settings.txt', 'r').readlines()  # reads the color from the file
-    bgcolor = lines[0]  # initializes the color
+    bgcolor = lines[0]  # initializes the color and is the point for all other windows to leach off it
 
     def menu(self):
         self.menuRoot = tk.Tk()
@@ -23,10 +23,10 @@ class optionWindow:
 
         self.labelOne = tk.Label(self.menuRoot, text="Change bg color: ", font=('Helvetica', 13),
                                  bg=optionWindow.bgcolor)
-        self.labelOne.place(x=3, y=8)
+        self.labelOne.place(x=20, y=8)
 
     def choose_color(self):
-        self.color_code = colorchooser.askcolor()[1]  # opens a color wheel and saves the hex code
+        self.color_code = colorchooser.askcolor(title= "Pick a Color")[1]  # opens a color wheel and saves the hex code
 
     def updateMenu(self):
         lines = open('settings.txt', 'r').readlines()

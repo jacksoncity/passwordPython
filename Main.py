@@ -51,10 +51,37 @@ netflix = tk.Button(root, text="Netflix", command=lambda: listener.updatePass(se
                     height=1, width=8)
 netflix.place(x=320, y=180)
 
-hulu = tk.Button(root, text="Hulu", command=lambda: listener.updatePass(self, "Hulu", 6), font=("Helvetica", 15),
+hulu = tk.Button(root, text="Hulu", command=lambda: listener.updatePass(self, "Hulu", 9), font=("Helvetica", 15),
                    height=1, width=8)
 hulu.place(x=40, y=250)
 
+crunchyRoll = tk.Button(root, text="Crunchyroll", command=lambda: listener.updatePass(self, "Crunchyroll", 10), font=("Helvetica", 15),
+                   height=1, width=8)
+crunchyRoll.place(x=180, y=250)
+
+minecraft = tk.Button(root, text="Minecraft", command=lambda: listener.updatePass(self, "Minecraft", 11), font=("Helvetica", 15),
+                   height=1, width=8)
+minecraft.place(x=320, y=250)
+
+steam = tk.Button(root, text="Steam", command=lambda: listener.updatePass(self, "Steam", 12), font=("Helvetica", 15),
+                   height=1, width=8)
+steam.place(x=40, y=320)
+
+riot = tk.Button(root, text="Riot", command=lambda: listener.updatePass(self, "Riot", 13), font=("Helvetica", 15),
+                   height=1, width=8)
+riot.place(x=180, y=320)
+
+college = tk.Button(root, text="College", command=lambda: listener.updatePass(self, "College", 14), font=("Helvetica", 15),
+                   height=1, width=8)
+college.place(x=320, y=320)
+
+playStation = tk.Button(root, text="PlayStation", command=lambda: listener.updatePass(self, "PlayStation", 15), font=("Helvetica", 15),
+                   height=1, width=8)
+playStation.place(x=40, y=390)
+
+nintendo = tk.Button(root, text="Nintendo", command=lambda: listener.updatePass(self, "Nintendo", 16), font=("Helvetica", 15),
+                   height=1, width=8)
+nintendo.place(x=180, y=390)
 # options button
 options = tk.Button(root, text="Options", command=lambda: optionWindow.menu(self), font=("Helvetica", 8),
                     height=1, width=6)
