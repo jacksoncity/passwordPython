@@ -10,7 +10,7 @@ class optionWindow:
     def menu(self):
         self.menuRoot = tk.Tk()
         self.menuRoot.resizable(False, False)
-        self.menuRoot.geometry("300x300+750+250")
+        self.menuRoot.geometry("300x300+950+450")
         self.menuRoot.title("Options Menu")
         self.menuRoot.configure(bg=optionWindow.bgcolor)
 
@@ -30,8 +30,11 @@ class optionWindow:
     def updateMenu(self):
         lines = open('settings.txt', 'r').readlines()
         lines[0] = self.color_code
-        out = open('settings.txt', 'w')
-        out.writelines(lines)
-        self.menuRoot.configure(bg=optionWindow.bgcolor)
-        out.close()
-        sys.exit()
+        if lines[0]:
+            out = open('settings.txt', 'w')
+            out.writelines(lines)
+            self.menuRoot.configure(bg=optionWindow.bgcolor)
+            out.close()
+            sys.exit()
+        else:
+            self.menuRoot.destroy()

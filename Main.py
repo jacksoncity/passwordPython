@@ -1,7 +1,4 @@
 import tkinter as tk
-
-import pygame as pygame
-
 from Listener import *
 
 
