@@ -11,13 +11,13 @@ class optionWindow:
         self.menuRoot.configure(bg="grey")
 
         # Drop down menu of colors to choose from
-        colorMenu = [
-            "White", "Gray", "Black", "Red", "Blue", "Green", "Pink", "Purple", "Yellow"
+        self.colorMenu = [
+            "Gray", "White", "Black", "Red", "Blue", "Green", "Pink", "Purple", "Yellow"
         ]
         variable = tk.StringVar(self.menuRoot)
-        variable.set(colorMenu[0])
+        variable.set(self.colorMenu[0])
 
-        self.opt = tk.OptionMenu(self.menuRoot, variable, *colorMenu)
+        self.opt = tk.OptionMenu(self.menuRoot, variable, *self.colorMenu)
         self.opt.config(font=('Helvetica', 13))
         self.opt.place(x=180, y=3)
 
