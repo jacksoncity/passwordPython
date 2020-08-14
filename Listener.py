@@ -47,7 +47,7 @@ class listener:
     # changes the password to what is inside of the textfield
     def confirm(self, num):
         password = self.passEntry.get()  # holds new password from the Entry widget
-        line = num  # hte line to be written to (changes depending on button chosen)
+        line = num  # the line to be written to (changes depending on button chosen)
         listener.replace_line(self, 'passwords.txt', line, password)
 
     def replace_line(self, fileName, lineNum, text):
@@ -56,5 +56,5 @@ class listener:
                                       # below of it, to the line being edited
         out = open(fileName, 'w')
         out.writelines(lines)
-        self.textDisplay.configure(text=lines[lineNum]) # updates password on screen before closing txt file
+        self.textDisplay.configure(text=lines[lineNum])  # updates password on screen before closing txt file
         out.close()
