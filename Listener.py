@@ -27,6 +27,7 @@ class listener:
             "Twitch": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/twitchlogo.ico',
             "Netflix": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/netflixlogo.ico'
         }
+        # if statement to check if there is a corresponding icon for the button pressed
         if name in serviceList.keys():
             self.newRoot.iconbitmap(serviceList[name])
         else:
