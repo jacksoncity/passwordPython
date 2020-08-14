@@ -51,6 +51,10 @@ netflix = tk.Button(root, text="Netflix", command=lambda: listener.updatePass(se
                     height=1, width=8)
 netflix.place(x=320, y=180)
 
+hulu = tk.Button(root, text="Hulu", command=lambda: listener.updatePass(self, "Hulu", 6), font=("Helvetica", 15),
+                   height=1, width=8)
+hulu.place(x=40, y=250)
+
 # options button
 options = tk.Button(root, text="Options", command=lambda: optionWindow.menu(self), font=("Helvetica", 8),
                     height=1, width=6)

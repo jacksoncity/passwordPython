@@ -27,8 +27,10 @@ class listener:
             "Twitch": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/twitchlogo.ico',
             "Netflix": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/netflixlogo.ico'
         }
-
-        self.newRoot.iconbitmap(serviceList[name])
+        if name in serviceList.keys():
+            self.newRoot.iconbitmap(serviceList[name])
+        else:
+            self.newRoot.iconbitmap('c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/keyicon.ico')
 
         # base widgets to display
         self.passEntry = tk.Entry(self.newRoot, bd=3)
