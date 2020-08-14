@@ -2,6 +2,8 @@ import tkinter as tk
 import self
 import fileinput
 
+from OptionsMenu import optionWindow
+
 
 class listener:
 
@@ -11,7 +13,7 @@ class listener:
         self.newRoot.resizable(False, False)
         self.newRoot.geometry("300x300+750+250")
         self.newRoot.title(name)
-        self.newRoot.configure(bg="grey")
+        self.newRoot.configure(bg=optionWindow.bgcolor)
 
         # dictionary to hold logo locations to display on top left of window
         serviceList = {
@@ -33,7 +35,7 @@ class listener:
         self.passEntry.place(x=90, y=210)
         self.passLabel = tk.Label(self.newRoot, text="New Password: ")
         self.passLabel.place(x=110, y=185)
-        self.passLabel.configure(bg="grey")
+        self.passLabel.configure(bg=optionWindow.bgcolor)
         self.updateButton = tk.Button(self.newRoot, text="Update Password",
                                       command=lambda: listener.confirm(self, self.bounds),
                                       font=("Helvetica", 10, 'bold'),
@@ -41,7 +43,7 @@ class listener:
         self.updateButton.place(x=90, y=250)
         self.lines = open('passwords.txt', 'r').readlines()
         self.currentPass = self.lines[self.bounds]
-        self.textDisplay = tk.Label(self.newRoot, text=self.currentPass, font=("Helvetica", 25, 'bold'), bg="grey")
+        self.textDisplay = tk.Label(self.newRoot, text=self.currentPass, font=("Helvetica", 25, 'bold'), bg=optionWindow.bgcolor)
         self.textDisplay.place(relx=.5, rely=.3, anchor="center")
 
     # changes the password to what is inside of the textfield
@@ -53,7 +55,7 @@ class listener:
     def replace_line(self, fileName, lineNum, text):
         lines = open(fileName, 'r').readlines()
         lines[lineNum] = text + '\n'  # adds '\n' so it keeps all other lines in tact, otherwise is slides what is
-                                      # below of it, to the line being edited
+        # below of it, to the line being edited
         out = open(fileName, 'w')
         out.writelines(lines)
         self.textDisplay.configure(text=lines[lineNum])  # updates password on screen before closing txt file
