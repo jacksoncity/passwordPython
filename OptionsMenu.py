@@ -10,7 +10,7 @@ class optionWindow:
     def menu(self):
         self.menuRoot = tk.Tk()
         self.menuRoot.resizable(False, False)
-        self.menuRoot.geometry("300x300+950+450")
+        self.menuRoot.geometry("300x300+1050+250")
         self.menuRoot.title("Options Menu")
         self.menuRoot.configure(bg=optionWindow.bgcolor)
 

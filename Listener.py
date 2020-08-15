@@ -64,10 +64,11 @@ class listener:
         listener.replace_line(self, 'passwords.txt', line, password)
 
     def replace_line(self, fileName, lineNum, text):
-        lines = open(fileName, 'r').readlines()
-        lines[lineNum] = text + '\n'  # adds '\n' so it keeps all other lines in tact, otherwise is slides what is
-        # below of it, to the line being edited
-        out = open(fileName, 'w')
-        out.writelines(lines)
-        self.textDisplay.configure(text=lines[lineNum])  # updates password on screen before closing txt file
-        out.close()
+        if text:
+            lines = open(fileName, 'r').readlines()
+            lines[lineNum] = text + '\n'  # adds '\n' so it keeps all other lines in tact, otherwise is slides what is
+            # below of it, to the line being edited
+            out = open(fileName, 'w')
+            out.writelines(lines)
+            self.textDisplay.configure(text=lines[lineNum])  # updates password on screen before closing txt file
+            out.close()
