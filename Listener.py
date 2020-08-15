@@ -25,7 +25,15 @@ class listener:
             "Google": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/googlelogo.ico',
             "GitHub": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/githublogo.ico',
             "Twitch": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/twitchlogo.ico',
-            "Netflix": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/netflixlogo.ico'
+            "Netflix": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/netflixlogo.ico',
+            "Hulu": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/hululogo.ico',
+            "Crunchyroll": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/crunchyrolllogo.ico',
+            "Minecraft": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/minecraftlogo.ico',
+            "Steam": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/steamlogo.ico',
+            "Riot": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/riotlogo.ico',
+            "College": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/collegelogo.ico',
+            "PlayStation": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/playstationlogo.ico',
+            "Nintendo": 'c:/Users/jacks/Documents/DESKTOP/Personal_Programming/passwordPython/icons/nintendologo.ico'
         }
         # if statement to check if there is a corresponding icon for the button pressed
         if name in serviceList.keys():
