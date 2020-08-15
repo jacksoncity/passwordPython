@@ -77,14 +77,16 @@ college.place(x=320, y=320)
 
 playStation = tk.Button(root, text="PlayStation", command=lambda: listener.updatePass(self, "PlayStation", 15), font=("Helvetica", 15),
                    height=1, width=8)
-playStation.place(x=40, y=390)
+playStation.place(x=100, y=390)
 
 nintendo = tk.Button(root, text="Nintendo", command=lambda: listener.updatePass(self, "Nintendo", 16), font=("Helvetica", 15),
                    height=1, width=8)
-nintendo.place(x=180, y=390)
+nintendo.place(x=250, y=390)
+
 # options button
 options = tk.Button(root, text="Options", command=lambda: optionWindow.menu(self), font=("Helvetica", 8),
                     height=1, width=6)
 options.place(x=5, y=5)
 
+# main loop to initiate everything
 root.mainloop()
