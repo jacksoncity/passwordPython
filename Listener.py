@@ -1,7 +1,6 @@
 import tkinter as tk
 import self
 import fileinput
-
 from OptionsMenu import optionWindow
 
 
